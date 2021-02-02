@@ -226,7 +226,8 @@ const browserRequest = async (ctx: RequestContext, params: BaseRequestAPICall) =
   const session = oneTimeSession
     ? await sessions.create(sessionId, {
       userAgent: params.userAgent,
-      oneTimeSession
+      oneTimeSession,
+      proxy: params.proxy
     })
     : sessions.get(sessionId)
 
