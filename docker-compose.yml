@@ -14,3 +14,8 @@ services:
     restart: unless-stopped
     networks:
       - no-internet
+networks:
+  no-internet:
+    name: php-rabbitmq
+    driver: bridge
+#        internal: true
