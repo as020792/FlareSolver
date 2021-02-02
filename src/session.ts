@@ -59,6 +59,7 @@ export default {
     let args = [
       '--no-sandbox',
       '--disable-setuid-sandbox',
+      // '--proxy-server=138.128.19.166:9153',
       '--disable-dev-shm-usage' // issue #45
     ];
     if (proxy && proxy.url) {
@@ -105,6 +106,7 @@ export default {
 
     if (cookies) {
       const page = await browser.newPage()
+      // await page.authenticate({ username: 'a020792s', password: 'Svadim1972' });
       await page.setCookie(...cookies)
     }
 
